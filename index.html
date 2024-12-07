@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="meteorology UI, LHMT">
+        <title>Meteorologinės stotelės UI</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <body>
+            <div class="place-selection">
+            <label>Pasirinkite miestą:</label>
+            <select id="placeSelector">
+                <option value='vilnius'>Vilnius</option>
+                <option value='kaunas'>Kaunas</option>
+                <option value="klaipeda">Klaipėda</option>
+                <option value='siauliai'>Šiauliai</option>
+                <option value='panevezys'>Panevėžys</option>
+                <option value='alytus'>Alytus</option>
+            </select>                
+            </div>
+            <div class="weather-container"> 
+                <h1>Meteorologinė Stotelė</h1>
+                
+                <div class="weather-row">
+                    <div class="weather-col">
+                        <img src="https://icons.veryicon.com/png/o/miscellaneous/test-6/weather-91.png" width="200" height="200">
+                        <p><b>Vieta:</b> <span id="placeName">--</span></p>
+                    </div>
+                    <div class="weather-col">
+                        <p><b>Temperatūra:</b> <span id="temperature">--</span> °C</p>
+                        <p><b>Jutiminė temperatūra:</b> <span id="feelsLikeTemp">--</span> °C</p>
+                        <p><b>Drėgmė:</b> <span id="humidity">--</span> %</p>
+                        <p><b>Vėjo Greitis:</b> <span id="wind">--</span> m/s</p>
+                        <p><b>Sąlygos:</b> <span id="conditions">--</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="refresh-btn" onclick="fetchWeather()">Atnaujinti</button>
+            <script src="script.js"></script>
+
+            <footer>
+                <p>Duomenų šaltinis: <a href="https://api.meteo.lt">Meteo.lt</a></p>
+            </footer>
+        </body>
+        
+    </body>
+</html>
